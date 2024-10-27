@@ -3,7 +3,7 @@ import logging
 
 def error_message_detail(error, error_detail: sys):
     _, _, exc_tb = error_detail.exc_info()  # Finding the traceback
-    file_name = exc_tb.tb_frame.f_code.co_filename
+    file_name = exc_tb.tb_frame.f_code.co_filename## (to remember)
     # Using format() instead of f-string
     error_message = "Error occurred in python script name [{}] line number [{}] error message [{}]".format(
         file_name, exc_tb.tb_lineno, str(error)
